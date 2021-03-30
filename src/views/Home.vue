@@ -1,19 +1,16 @@
 <template>
   <div class="home">
-   <nav-bar></nav-bar>
+ <music-list></music-list>
   </div>
 </template>
 
 <script>
-import NavBar from '../components/common/nav/navBar.vue'
-// @ is an alias to /src
-
-
+import musicList from '../components/common/list/musicList.vue';
 export default {
-  name: 'Home',
-  components: {
-    NavBar
-  }
-}
+  components: { musicList },
+  name: "Home",
+  
+
+};
 </script>
 
