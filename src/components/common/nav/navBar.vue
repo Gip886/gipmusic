@@ -23,9 +23,12 @@ export default {};
 <style lang="stylus" scoped>
 .container {
   display: flex;
-  width: 100%;
+  // width: 100%; 别加这个
   height: 70px;
   box-shadow: 0 2px 3px -1px red;
+  // margin-bottom: 20px;
+  // 上右下左
+  margin: 0px 30px 20px 30px;
 
   .logo {
     padding: 0;
@@ -46,20 +49,22 @@ export default {};
     }
   }
 
-  .navList {
-    flex: 1;
-    display: flex;
-    list-style: none;
-    flex-direction: row;
-    margin: 20px auto;
+  .body {
+    .navList {
+      flex: 1;
+      display: flex;
+      list-style: none;
+      flex-direction: row;
+      margin: 20px auto;
 
-    li {
-      margin: 0 25px;
-      letter-spacing: 5px;
-      font-size: 18px;
+      li {
+        margin: 0 25px;
+        letter-spacing: 5px;
+        font-size: 18px;
 
-      a {
-        text-decoration: none;
+        a {
+          text-decoration: none;
+        }
       }
     }
   }

@@ -1,14 +1,15 @@
 <template>
   <div id="app">
-    <el-container>
-      <el-header>
+    <!-- <el-container> -->
+      <!-- <el-header> -->
         <navBar></navBar>
-      </el-header>
-      <el-main>
+      <!-- </el-header> -->
+      <!-- <el-main> -->
         <router-view></router-view>
-      </el-main>
-    </el-container>
-
+      <!-- </el-main> -->
+    <!-- </el-container> -->
+    <!-- target属性去掉才可以生效 -->
+  <el-backtop></el-backtop>
   </div>
 </template>
 <script>
@@ -20,7 +21,7 @@ components:{
 })
 </script>
 
-<style>
+<style scoped>
 /* #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
