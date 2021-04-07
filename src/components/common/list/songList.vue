@@ -26,7 +26,11 @@
     <div class="body-table">
       <div class="position">
         <el-table :data="trackIds" stripe highlight-current-row class="table">
-          <el-table-column prop="date" width="50"></el-table-column>
+          <el-table-column label="序号">
+            <template slot-scope="scope">
+              {{ scope.$index + 1 }}
+            </template>
+          </el-table-column>
           <el-table-column
             prop="name"
             label="歌曲"
@@ -50,6 +54,7 @@
         </el-table>
       </div>
     </div>
+    <button @click="a">132132123</button>
   </div>
 </template>
 
@@ -135,6 +140,14 @@ export default {
       //  });
       // }
     },
+     async a(){
+     
+      let res = await this.$api.getSongDetails(421563717);
+        // ![](https://cdn.jsdelivr.net/gh/Gip886/picture/img/20210407215937.png)
+       let Data = res.data.songs[0];
+        console.log(Data);
+    
+    }
   },
 };
 </script>
@@ -210,7 +223,7 @@ export default {
       margin-top: 20px;
     }
     .table {
-      width: 800px;
+      width: 900px;
       font-size: 15px;
     }
   }
